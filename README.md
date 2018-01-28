@@ -1,7 +1,7 @@
 # VPSInstallerV1
 Instalador de Paquetes para VPS - Dropbear, SSH, Squid y OpenVPN
 
-Para instalar este script, desde nuestra terminal
+PowerMX - VPS InstallerV1
 =========
 ## Instalacion:
 ### Ubuntu 6.04 x64
@@ -18,6 +18,7 @@ bash PowerMX.sh
 
 
 Android México Team
+=========
 
-Telegram: http://t.me/pwrmx/
-Blog: http://pwrmx.blogspot.com/
+# Telegram: http://t.me/pwrmx/
+# Blog: http://pwrmx.blogspot.com/
