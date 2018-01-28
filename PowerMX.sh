@@ -22,14 +22,10 @@ cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
 # remove unused
 apt-get -y --purge remove samba*;
 apt-get -y --purge remove apache2*;
-apt-get -y --purge remove sendmail*;
 apt-get -y --purge remove bind9*;
 
 # update
 apt-get update; apt-get -y upgrade;
-
-# install webserver
-apt-get -y install nginx php5-fpm php5-cli
 
 # install essential package
 apt-get -y install bmon iftop htop nmap axel nano iptables traceroute sysv-rc-conf dnsutils bc nethogs openvpn vnstat less screen psmisc apt-file whois ptunnel ngrep mtr git zsh mrtg snmp snmpd snmp-mibs-downloader unzip unrar rsyslog debsums rkhunter
