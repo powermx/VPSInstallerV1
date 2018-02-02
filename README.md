@@ -6,8 +6,9 @@ PowerMX - VPS InstallerV1
 ## Instalacion:
 ### Ubuntu 6.04 x64
 ```
-wget https://github.com/powermx/VPSInstallerV1/blob/master/PowerMX.sh
-bash PowerMX.sh
+wget https://raw.githubusercontent.com/powermx/VPSInstallerV1/master/PowerMX.sh
+chmod +x PowerMX.sh
+./PowerMX.sh
 ```
 
 ### Servicios Instalados
