@@ -14,11 +14,6 @@ apt-get update;apt-get -y install wget curl;
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 service ssh restart
 
-# set repo
-wget -O /etc/apt/sources.list "https://raw.githubusercontent.com/powermx/VPSInstallerV1/master/sources.list.debian6"
-wget "http://www.dotdeb.org/dotdeb.gpg"
-cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
-
 # remove unused
 apt-get -y --purge remove samba*;
 apt-get -y --purge remove apache2*;
@@ -87,7 +82,7 @@ service ssh restart
 
 # install dropbear
 echo "Instalando Dropbear"
-apt-get -y install dropbear
+apt-get install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=443/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109 -p 110"/g' /etc/default/dropbear
@@ -97,7 +92,7 @@ service dropbear restart
 
 # install squid
 echo "Instalando Proxy Squid"
-apt-get -y install squid
+apt-get install squid
 wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/powermx/VPSInstallerV1/master/squid.conf"
 sed -i $MYIP2 /etc/squid/squid.conf;
 service squid restart
