@@ -82,7 +82,7 @@ service ssh restart
 
 # install dropbear
 echo "Instalando Dropbear"
-apt-get install dropbear
+apt-get -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=443/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109 -p 110"/g' /etc/default/dropbear
@@ -92,7 +92,7 @@ service dropbear restart
 
 # install squid
 echo "Instalando Proxy Squid"
-apt-get install squid
+apt-get -y install squid
 wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/powermx/VPSInstallerV1/master/squid.conf"
 sed -i $MYIP2 /etc/squid/squid.conf;
 service squid restart
